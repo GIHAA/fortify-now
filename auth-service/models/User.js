@@ -22,11 +22,11 @@ const User = sequelize.define("User", {
     allowNull: false,
   },
   role: {
-    type: DataTypes.ENUM('FARMER', 'ADMIN'),
+    type: DataTypes.ENUM('CUSTOMER', 'ADMIN'),
     allowNull: false,
-    defaultValue: 'FARMER',
+    defaultValue: 'CUSTOMER',
     validate: {
-      isIn: [['FARMER', 'ADMIN']]
+      isIn: [['CUSTOMER', 'ADMIN']]
     }
   }
 });

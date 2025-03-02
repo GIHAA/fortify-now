@@ -53,7 +53,7 @@ const loginUser = async (email, password) => {
 
     return {
       success: true,
-      data: { token , user , famer},
+      data: { token , user },
       message: "Login successful",
     };
   } catch (error) {
