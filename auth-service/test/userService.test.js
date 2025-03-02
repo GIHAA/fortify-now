@@ -1,13 +1,11 @@
 // test/userService.test.js
 const userService = require("../service/userService");
 const userRepo = require("../repository/userRepo");
-const FarmerDetails = require("../models/FarmerDetails");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 // Mock dependencies
 jest.mock("../repository/userRepo");
-jest.mock("../models/FarmerDetails");
 jest.mock("bcryptjs");
 jest.mock("jsonwebtoken");
 
@@ -68,14 +66,8 @@ describe("User Service", () => {
         password_hash: "hashedPassword",
       };
 
-      const mockFarmer = {
-        age: 30,
-        vision_problems: false,
-        color_blindness: false,
-      };
 
       userRepo.findUserByEmail.mockResolvedValue(mockUser);
-      FarmerDetails.findOne.mockResolvedValue(mockFarmer);
       bcrypt.compare.mockResolvedValue(true);
       jwt.sign.mockReturnValue("mockToken");
 
@@ -87,11 +79,6 @@ describe("User Service", () => {
       expect(result).toEqual({
         success: true,
         data: {
-          famer: {
-            age: 30,
-            color_blindness: false,
-            vision_problems: false,
-          },
           token: "mockToken",
           user: {
             email: "test@test.com",
