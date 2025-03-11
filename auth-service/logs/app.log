@@ -86,3 +86,6 @@
 2025-03-02T07:13:55.443Z [32minfo[39m: Server running on port 3001
 2025-03-02T07:13:57.105Z [32minfo[39m: Connection to the database has been established successfully.
 2025-03-02T07:13:58.411Z [32minfo[39m: Database synced successfully.
+2025-03-02T11:33:03.626Z [31merror[39m: Unable to connect to the database: 
+2025-03-02T11:33:37.227Z [31merror[39m: Unable to connect to the database: 
+2025-03-02T11:34:16.505Z [31merror[39m: Unable to connect to the database: 
