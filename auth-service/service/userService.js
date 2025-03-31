@@ -101,10 +101,27 @@ const updateUser = async (userId, updateData) => {
   }
 };
 
+//getAllUsers
+const getAllUsers = async (page, limit) => {
+  try {
+    const users = await userRepo.findAllUsers(page, limit);
+    return {
+      success: true,
+      data: users,
+      message: "Users fetched successfully",
+    };
+  } catch (error) {
+    console.error("Error in fetching all users service:", error);
+    return { success: false, statusCode: 500, message: "Server error" };
+  }
+};
+
+
 // Add to exports
 module.exports = {
   registerUser,
   loginUser,
   getUser,
   updateUser,
+  getAllUsers,
 };
