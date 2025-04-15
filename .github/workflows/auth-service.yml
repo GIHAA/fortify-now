@@ -17,8 +17,6 @@ jobs:
       contents: read
     
     steps:
-      - uses: actions/checkout@v4
-      
       - uses: actions/setup-node@v4
         with:
           node-version: 16
@@ -120,18 +118,12 @@ jobs:
       
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-        with:
-          version: latest
       
-      - name: Create a new Buildx builder (if not already created)
-        run: |
-          docker buildx create --use
-
-      - name: Login to Azure Container Registry
-        uses: azure/docker-login@v1
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
         with:
-          username: ${{ secrets.ACR_USERNAME }}
-          password: ${{ secrets.ACR_PASSWORD }}
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       
       - name: Extract branch name and set tag
         run: |
@@ -142,13 +134,13 @@ jobs:
           else
             echo "DOCKER_TAG=pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
           fi
-
-      - name: Build and push Docker image to Azure Container Registry
+      
+      - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
           context: ./auth-service
           push: ${{ github.event_name == 'push' }}
           platforms: linux/amd64,linux/arm64
           tags: |
-            ${{ secrets.ACR_NAME }}.azurecr.io/fortify-now-auth-service:${{ env.DOCKER_TAG }}
-            ${{ secrets.ACR_NAME }}.azurecr.io/fortify-now-auth-service:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/fortify-now-auth-service:${{ env.DOCKER_TAG }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/fortify-now-auth-service:latest
