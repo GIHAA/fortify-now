@@ -1,0 +1,109 @@
+2024-12-30T10:44:11.165Z [32minfo[39m: Server running on port 3000
+2024-12-30T10:44:11.638Z [31merror[39m: Unable to connect to the database: no pg_hba.conf entry for host "112.134.131.71", user "avnadmin", database "defaultdb", no encryption
+2024-12-30T10:46:18.229Z [32minfo[39m: Server running on port 3000
+2024-12-30T10:46:20.102Z [32minfo[39m: Connection to the database has been established successfully.
+2024-12-30T10:46:50.209Z [32minfo[39m: Server running on port 3000
+2024-12-30T10:46:51.802Z [32minfo[39m: Connection to the database has been established successfully.
+2024-12-30T10:46:52.614Z [32minfo[39m: Database synced successfully.
+2024-12-30T10:50:53.343Z [32minfo[39m: Server running on port 3000
+2024-12-30T10:51:09.296Z [32minfo[39m: Server running on port 3000
+2024-12-30T10:51:10.846Z [32minfo[39m: Connection to the database has been established successfully.
+2024-12-30T10:51:13.807Z [32minfo[39m: Database synced successfully.
+2024-12-30T10:51:18.857Z [32minfo[39m: Server running on port 3000
+2024-12-30T10:51:20.713Z [32minfo[39m: Connection to the database has been established successfully.
+2024-12-30T10:51:23.529Z [32minfo[39m: Database synced successfully.
+2025-01-03T01:07:24.293Z [32minfo[39m: Server running on port 3000
+2025-01-03T01:07:25.902Z [32minfo[39m: Connection to the database has been established successfully.
+2025-01-03T01:07:28.504Z [32minfo[39m: Database synced successfully.
+2025-01-03T01:09:25.479Z [32minfo[39m: Server running on port 3000
+2025-01-03T01:09:27.111Z [32minfo[39m: Connection to the database has been established successfully.
+2025-01-03T01:09:30.075Z [32minfo[39m: Database synced successfully.
+2025-01-03T01:09:53.143Z [32minfo[39m: Server running on port 3001
+2025-01-03T01:09:54.795Z [32minfo[39m: Connection to the database has been established successfully.
+2025-01-03T01:09:57.621Z [32minfo[39m: Database synced successfully.
+2025-01-03T01:13:58.605Z [32minfo[39m: Server running on port 3001
+2025-01-03T01:14:00.431Z [32minfo[39m: Connection to the database has been established successfully.
+2025-01-03T01:14:03.002Z [32minfo[39m: Database synced successfully.
+2025-02-18T00:39:01.570Z [32minfo[39m: Server running on port 3001
+2025-02-18T00:41:39.953Z [32minfo[39m: Server running on port 3001
+2025-02-18T00:44:00.834Z [32minfo[39m: Server running on port 3001
+2025-02-18T00:44:02.857Z [32minfo[39m: Connection to the database has been established successfully.
+2025-02-18T00:44:06.017Z [32minfo[39m: Database synced successfully.
+2025-02-18T01:07:28.396Z [32minfo[39m: Server running on port 3001
+2025-02-18T01:07:30.773Z [32minfo[39m: Connection to the database has been established successfully.
+2025-02-18T01:07:34.201Z [32minfo[39m: Database synced successfully.
+2025-02-22T05:32:06.268Z [32minfo[39m: Server running on port 3001
+2025-02-22T05:32:07.958Z [32minfo[39m: Connection to the database has been established successfully.
+2025-02-22T05:32:11.205Z [32minfo[39m: Database synced successfully.
+2025-02-22T05:36:53.355Z [32minfo[39m: Server running on port 3001
+2025-02-22T05:36:55.004Z [32minfo[39m: Connection to the database has been established successfully.
+2025-02-22T05:36:58.077Z [32minfo[39m: Database synced successfully.
+2025-02-22T05:39:43.617Z [32minfo[39m: Server running on port 3001
+2025-02-22T05:39:45.413Z [32minfo[39m: Connection to the database has been established successfully.
+2025-02-22T05:39:48.504Z [32minfo[39m: Database synced successfully.
+2025-02-22T05:40:46.360Z [32minfo[39m: Server running on port 3001
+2025-02-22T05:40:47.938Z [32minfo[39m: Connection to the database has been established successfully.
+2025-02-22T05:40:50.761Z [32minfo[39m: Database synced successfully.
+2025-02-23T08:07:37.852Z [32minfo[39m: Server running on port 3001
+2025-02-23T08:07:39.585Z [32minfo[39m: Connection to the database has been established successfully.
+2025-02-23T08:07:42.436Z [32minfo[39m: Database synced successfully.
+2025-02-23T09:47:14.555Z [32minfo[39m: Server running on port 3001
+2025-02-23T09:47:16.120Z [32minfo[39m: Connection to the database has been established successfully.
+2025-02-23T09:47:19.261Z [32minfo[39m: Database synced successfully.
+2025-02-24T04:50:39.826Z [32minfo[39m: Server running on port 3001
+2025-02-24T04:50:41.687Z [32minfo[39m: Connection to the database has been established successfully.
+2025-02-24T04:50:45.244Z [32minfo[39m: Database synced successfully.
+2025-03-02T06:57:51.699Z [32minfo[39m: Server running on port 3001
+2025-03-02T06:57:53.395Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-02T06:57:56.890Z [32minfo[39m: Database synced successfully.
+2025-03-02T07:06:59.931Z [32minfo[39m: Server running on port 3001
+2025-03-02T07:07:01.739Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-02T07:07:02.857Z [32minfo[39m: Database synced successfully.
+2025-03-02T07:07:23.180Z [32minfo[39m: Server running on port 3001
+2025-03-02T07:07:25.069Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-02T07:07:26.031Z [32minfo[39m: Database synced successfully.
+2025-03-02T07:07:31.297Z [32minfo[39m: Server running on port 3001
+2025-03-02T07:07:32.937Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-02T07:07:34.123Z [32minfo[39m: Database synced successfully.
+2025-03-02T07:07:43.308Z [32minfo[39m: Server running on port 3001
+2025-03-02T07:07:44.943Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-02T07:07:45.864Z [32minfo[39m: Database synced successfully.
+2025-03-02T07:07:52.447Z [32minfo[39m: Server running on port 3001
+2025-03-02T07:07:54.147Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-02T07:07:55.340Z [32minfo[39m: Database synced successfully.
+2025-03-02T07:07:58.294Z [32minfo[39m: Server running on port 3001
+2025-03-02T07:07:59.831Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-02T07:08:00.948Z [32minfo[39m: Database synced successfully.
+2025-03-02T07:08:12.435Z [32minfo[39m: Server running on port 3001
+2025-03-02T07:08:14.226Z [32minfo[39m: Server running on port 3001
+2025-03-02T07:08:15.804Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-02T07:08:16.926Z [32minfo[39m: Database synced successfully.
+2025-03-02T07:12:40.262Z [32minfo[39m: Server running on port 3001
+2025-03-02T07:12:41.956Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-02T07:12:42.962Z [32minfo[39m: Database synced successfully.
+2025-03-02T07:13:52.217Z [32minfo[39m: Server running on port 3001
+2025-03-02T07:13:53.959Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-02T07:13:55.443Z [32minfo[39m: Server running on port 3001
+2025-03-02T07:13:57.105Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-02T07:13:58.411Z [32minfo[39m: Database synced successfully.
+2025-03-02T11:33:03.626Z [31merror[39m: Unable to connect to the database: 
+2025-03-02T11:33:37.227Z [31merror[39m: Unable to connect to the database: 
+2025-03-02T11:34:16.505Z [31merror[39m: Unable to connect to the database: 
+2025-03-31T05:41:10.704Z [32minfo[39m: Server running on port 3001
+2025-03-31T05:41:12.731Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-31T05:41:13.764Z [32minfo[39m: Database synced successfully.
+2025-03-31T05:42:43.124Z [32minfo[39m: Server running on port 3001
+2025-03-31T05:42:44.387Z [32minfo[39m: Server running on port 3001
+2025-03-31T05:42:46.006Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-31T05:42:46.801Z [32minfo[39m: Server running on port 3001
+2025-03-31T05:42:48.358Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-31T05:42:49.468Z [32minfo[39m: Database synced successfully.
+2025-03-31T05:42:58.729Z [32minfo[39m: Server running on port 3001
+2025-03-31T05:42:59.806Z [32minfo[39m: Server running on port 3001
+2025-03-31T05:43:01.370Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-31T05:43:02.409Z [32minfo[39m: Database synced successfully.
+2025-03-31T05:43:07.347Z [32minfo[39m: Server running on port 3001
+2025-03-31T05:43:09.002Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-31T05:43:14.353Z [32minfo[39m: Server running on port 3001
+2025-03-31T05:43:15.912Z [32minfo[39m: Connection to the database has been established successfully.
+2025-03-31T05:43:16.956Z [32minfo[39m: Database synced successfully.
