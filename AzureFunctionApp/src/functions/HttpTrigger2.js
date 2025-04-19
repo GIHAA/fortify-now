@@ -7,7 +7,7 @@ module.exports = async function (context, req) {
         const credentials = req.body;
 
         if (!credentials || !credentials.username || !credentials.password) {
-            throw new Error('Missing required fields: username or password.');
+            throw new Error('Missing required fields:    or password.');
         }
 
         const token = await userController.login(credentials);
