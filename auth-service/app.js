@@ -17,7 +17,7 @@ app.use(express.json());
 app.use("/auth", authRoutes);
 
 // health check
-app.get("/health", (req, res) => {
+app.get("/auth/health", (req, res) => {
   res.json({ message: "User Service is running" });
 });
 
