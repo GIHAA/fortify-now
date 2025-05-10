@@ -36,7 +36,7 @@ const authenticate = async (req, res, next) => {
 };
 
 // Health check endpoint
-app.get('/health', (req, res) => {
+app.get('/api/health', (req, res) => {
     res.status(200).json({
         status: 'UP',
         timestamp: new Date().toISOString(),
