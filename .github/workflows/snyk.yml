@@ -23,26 +23,26 @@ jobs:
 
       # === auth-service ===
       - name: Install Dependencies (auth-service)
-        run: npm install
-        working-directory: ./auth-service
+        run: |
+          cd auth-service
+          npm install
 
       - name: Run Snyk Scan (auth-service)
-        uses: snyk/actions/node@master
-        with:
-          args: test
+        run: |
+          cd auth-service
+          npx snyk test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        working-directory: ./auth-service
 
       # === api-gateway ===
       - name: Install Dependencies (api-gateway)
-        run: npm install
-        working-directory: ./api-gateway
+        run: |
+          cd api-gateway
+          npm install
 
       - name: Run Snyk Scan (api-gateway)
-        uses: snyk/actions/node@master
-        with:
-          args: test
+        run: |
+          cd api-gateway
+          npx snyk test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        working-directory: ./api-gateway
