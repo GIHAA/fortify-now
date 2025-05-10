@@ -11,21 +11,38 @@ on:
 jobs:
   security-check:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Install Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
 
-      - name: Install Dependencies
+      # === auth-service ===
+      - name: Install Dependencies (auth-service)
         run: npm install
+        working-directory: auth-service
 
-      - name: Run Snyk Security Scan
+      - name: Run Snyk Scan (auth-service)
         uses: snyk/actions/node@master
         with:
           args: test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        working-directory: auth-service
+
+      # === api-gateway ===
+      - name: Install Dependencies (api-gateway)
+        run: npm install
+        working-directory: api-gateway
+
+      - name: Run Snyk Scan (api-gateway)
+        uses: snyk/actions/node@master
+        with:
+          args: test
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        working-directory: api-gateway
