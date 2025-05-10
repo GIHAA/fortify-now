@@ -2,47 +2,77 @@ name: Snyk Security Scan
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main, master ]
   pull_request:
-    branches:
-      - main
+    branches: [ main, master ]
 
 jobs:
-  security-check:
+  api-gateway-security:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./api-gateway
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-
-      # === auth-service ===
-      - name: Install Dependencies (auth-service)
-        run: npm install
-        working-directory: ./auth-service
-
-      - name: Run Snyk Scan (auth-service)
+          cache: 'npm'
+          cache-dependency-path: './api-gateway/package-lock.json'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/node@master
-        with:
-          args: test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        working-directory: ./auth-service
-
-      # === api-gateway ===
-      - name: Install Dependencies (api-gateway)
-        run: npm install
-        working-directory: ./api-gateway
-
-      - name: Run Snyk Scan (api-gateway)
-        uses: snyk/actions/node@master
         with:
-          args: test
+          args: --severity-threshold=high
+          
+      - name: Run Snyk to monitor for vulnerabilities
+        if: github.event_name != 'pull_request'
+        uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        working-directory: ./api-gateway
+        with:
+          command: monitor
+          args: --project-name=api-gateway
+
+  auth-service-security:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./auth-service
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: './auth-service/package-lock.json'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --severity-threshold=high
+          
+      - name: Run Snyk to monitor for vulnerabilities
+        if: github.event_name != 'pull_request'
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          command: monitor
+          args: --project-name=auth-service
