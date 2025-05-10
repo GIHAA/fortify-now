@@ -21,6 +21,7 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
+        working-directory: ./auth-service
         run: npm install
 
       - name: Run Snyk Security Scan
@@ -29,3 +30,4 @@ jobs:
           args: test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        working-directory: ./auth-service
