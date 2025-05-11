@@ -52,6 +52,12 @@ app.use('/test-service', proxy('http://test-service:3002', {
     proxyReqPathResolver: (req) => `/auth${req.url}`
 }));
 
+
+app.use('/test3-service', proxy('http://test3-service:3004', {
+    proxyReqPathResolver: (req) => `/auth${req.url}`
+}));
+
+
 const PORT = process.env.GATEWAY_PORT || 3000;
 
 app.listen(PORT, () => {
