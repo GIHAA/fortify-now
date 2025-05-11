@@ -42,10 +42,21 @@ app.get('/health', (req, res) => {
     });
 });
 
-// Routes that don't need authentication
+
 app.use('/auth-service', proxy('http://user-service:3001', {
     proxyReqPathResolver: (req) => `/auth${req.url}`
 }));
+
+
+app.use('/test-service', proxy('http://test-service:3002', {
+    proxyReqPathResolver: (req) => `/auth${req.url}`
+}));
+
+
+app.use('/test3-service', proxy('http://test3-service:3004', {
+    proxyReqPathResolver: (req) => `/auth${req.url}`
+}));
+
 
 const PORT = process.env.GATEWAY_PORT || 3000;
 
